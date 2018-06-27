@@ -50,5 +50,5 @@ cousin(X,Y) :- uncle(Unc , X),father(Unc,Y).
 ancestor(X,Y) :- parent(X,Y).
 ancestor(X,Y) :- parent(X,Somebody),ancestor(Somebody,Y).
 brother(X,Y) :-  male(X),parent(Somebody,X),parent(Somebody,Y), X \= Y.
-
+sibling(X,Y) :- parent(Somebody,X),parent(Somebody,Y), X \= Y.
 
